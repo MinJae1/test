@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>11-4-1</title>
+</head>
+
+<body>
+  <h3>사진과 이름 출력</h3>
+  <hr>
+  <canvas id="canvas" width="300" height="300" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+    context.font = "italic 35px forte";
+    context.fillStyle = "violet";
+    context.strokeStyle = "blue";
+
+    var img = new Image();
+    img.onload = function() {
+      context.drawImage(img, 20, 20, 80, 95);
+      context.fillText("spongebob", 20, 67);
+      context.strokeText("spongebob", 20, 67);
+    }
+    img.src = "media/spongebob.png";
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <canvas id="canvas" width="300" height="300" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+
+    context.beginPath();
+    context.strokeStyle = "magenta";
+    context.arc(100, 70, 30, 0, 1.5 * Math.PI, false);
+    context.stroke();
+
+    context.beginPath();
+    context.strokeStyle = "blue";
+    context.arc(100, 70, 50, Math.PI / 2, Math.PI, true);
+    context.stroke();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>7-5</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var name = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+
+    document.write("<h3>문자열 배열 다루기</h3>");
+    document.write("<hr>");
+
+    document.write("이름 : ");
+
+    var n_name = new Array();
+
+    n_name = name.split(',');
+
+    document.write(n_name.join(" "));
+
+    document.write("<br>가장 긴 이름 : ");
+
+    var long = n_name.length;
+    var lo_st = n_name[0];
+
+    for (var i = 0; i < n_name.length; i++) {
+      if (n_name[i].length > long) {
+        long = n_name[i].length;
+        lo_st = n_name[i];
+      }
+    }
+    document.write(lo_st);
+    document.write("<br>가장 먼저 나오는 이름 : ");
+    n_name.sort();
+
+    document.write(n_name[0]);
+
+    document.write("<br>사전순 이름 : ");
+    document.write(n_name.join(" "));
+  </script>
+</body>
+
+</html>

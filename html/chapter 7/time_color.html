@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>방문 시간에따라 변하는 배경</title>
+</head>
+
+<body>
+  방문시간이 짝수 : #BCA9F5 <br> 방문시간이 홀수 : #F5A9BC<br><br>
+
+  <script type="text/javascript">
+    var current = new Date();
+
+    if (current.getSeconds() % 2 == 0) {
+      document.body.style.backgroundColor = "#BCA9F5";
+    } else {
+      document.body.style.backgroundColor = "#F5A9BC";
+    }
+
+    document.write("현재시간 : ");
+    document.write("" + current.getHours() + "시 ");
+    document.write("" + current.getMinutes() + "분 ");
+    document.write("" + current.getSeconds() + "초<br>");
+  </script>
+</body>
+
+</html>

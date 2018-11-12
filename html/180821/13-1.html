@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>13-1</title>
+</head>
+
+<body>
+  <h3>자바스크립트로 비디오 제어</h3>
+  <hr>
+  <video id="video" width="300" height="200" src="media/bear.mp4">
+	<!-- <source src="media/bear.mp4" type="video/mp4"> -->
+	웹 브라우저가 video 태그를 지원하지 않습니다.
+</video>
+  <div id="msg">
+    비디오 제어 메세지
+  </div>
+  <button type="button" name="button" id="play" onclick="control(event)">play</button>
+  <button type="button" name="button" id="pause" onclick="control(event)">pause</button>
+  <button type="button" name="button" id="replay" onclick="control(event)">replay</button>
+  <button type="button" name="button" id="vol-" onclick="control(event)">vol-</button>
+  <button type="button" name="button" id="vol+" onclick="control(event)">vol+</button>
+  <button type="button" name="button" id="mute" onclick="control(event)">mute</button>
+  <script type="text/javascript">
+    var new_div = document.getElementById("msg");
+    var new_video = document.getElementById("video");
+
+    function control(e) {
+      var id = e.target.id;
+      if (id == "play") {
+        new_video.play();
+        new_div.innerHTML = "재생";
+      } else if (id == "pause") {
+        new_video.pause();
+        new_div.innerHTML = "일시중지";
+      } else if (id == "replay") {
+        new_video.load();
+        new_video.play();
+        new_div.innerHTML = new_video.src + "를 처음부터 재생합니다";
+        // console.log(">>>>>>>>> " + new_video.src);
+      } else if (id == "vol-") {
+        new_video.volume -= 0.1;
+        if (new_video.volume < 0.1) {
+          new_video.volume = 0;
+        }
+        new_div.innerHTML = "음량 0.1 감소" + "현재" + new_video.volume.toFixed(1);
+      } else if (id == "vol+") {
+        new_video.volume += 0.1;
+        if (new_video.volume > 0.9) {
+          new_video.volume = 1.0;
+        }
+        new_div.innerHTML = "음량 0.1 증가" + "현재" + new_video.volume.toFixed(1);
+      } else if (id == "mute") {
+        new_video.muted = !new_video.muted;
+        if (new_video.muted) {
+          new_div.innerHTML = "음소거";
+        } else {
+          new_div.innerHTML = "음소거해제";
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>

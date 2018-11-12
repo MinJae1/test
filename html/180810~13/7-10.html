@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>7-10</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var bookArray = new Array();
+    for (var i = 0; i < 5; i++) {
+      q = prompt("콤마(,)로 구분 하여 제목 저자 가격 순 입력", "");
+      var new_book = q.split(",");
+
+      var book = new Object();
+
+      book.name = new_book[0];
+      book.person = new_book[1];
+      book.price = new_book[2];
+      bookArray[i] = book;
+    }
+
+    document.write("<h3>book객체만들기</h3>");
+    document.write("<hr>");
+
+    for (var i = 0; i < bookArray.length; i++) {
+      document.write("book : ");
+      document.write(bookArray[i].name + ", ");
+      document.write(bookArray[i].person + ", ");
+      document.write(bookArray[i].price + "<br>");
+    }
+
+    document.write("<hr>");
+    var index;
+    var ex = bookArray[0].price;
+    // console.log(ex + " , " + index);
+
+    for (var i = 0; i < 5; i++) {
+      if (bookArray[i].price > ex) {
+        ex = bookArray[i].price;
+        index = i;
+        // console.log(ex + " , " + index);
+      }
+    }
+    document.write("가장 비싼책 : " + bookArray[index].name);
+  </script>
+</body>
+
+</html>

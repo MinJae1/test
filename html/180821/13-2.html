@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>13-2</title>
+  <style media="screen">
+    table {
+      width: 550px;
+    }
+
+    .num {
+      border: 1px solid yellowgreen;
+      text-align: center;
+    }
+
+    .name {
+      border-bottom: 1px solid darkgray;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h3>오디오 재생</h3>
+  <hr>
+  <audio id="audio" src="" controls>
+    	웹 브라우저가 audio 태그를 지원하지 않습니다.
+    </audio>
+
+  <table>
+    <tbody>
+      <tr>
+        <td class="num">1</td>
+        <td class="name">애국가</td>
+        <td><button type="button" onclick="play(0)">재생</button> <button type="button" onclick="stop()">정지</button></td>
+      </tr>
+      <tr>
+        <td class="num">2</td>
+        <td class="name">Moon Glow</td>
+        <td><button type="button" onclick="play(1)">재생</button> <button type="button" onclick="stop()">정지</button></td>
+      </tr>
+      <tr>
+        <td class="num">3</td>
+        <td class="name">Embraceable You</td>
+        <td><button type="button" onclick="play(2)">재생</button> <button type="button" onclick="stop()">정지</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <script type="text/javascript">
+    var new_audio = document.getElementById("audio");
+    var audio_src = [];
+
+    function play(num) {
+      new_audio.src = audio_src[num];
+      alert('1분 미리듣기만 제공합니다');
+      new_audio.play();
+    }
+
+    function stop() {
+      audio.pause();
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>setTimeout()을 이용한 웹페이지 로드</title>
+  <script type="text/javascript">
+    var timerID = null;
+
+    function startTimer(time) {
+      timerID = setTimeout("load('https://www.naver.com/')", time);
+
+      document.getElementById("img").title = "타이머 작동";
+    }
+
+    function cancelTimer() {
+      if (timerID != null) {
+        clearTimeout(timerID);
+      }
+    }
+
+    function load(url) {
+      window.location = url;
+    }
+  </script>
+</head>
+
+<body>
+  <img src="media/naver.gif" id="img" onmouseover="startTimer(5000)" onmouseout="cancelTimer()">
+</body>
+
+</html>

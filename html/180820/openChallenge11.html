@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>openChalleng 11</title>
+</head>
+
+<body>
+  <h3>학점 별로 학생수를 입력하면 파이차트로 비율 그리기</h3>
+  <hr>
+  <table>
+    <tbody>
+      <tr>
+        <td><label> A <input type="number" min="0" id="grade_A" value="0">명</label></td>
+        <td><label> B <input type="number" min="0" id="grade_B" value="0">명</label></td>
+        <td><label> C <input type="number" min="0" id="grade_C" value="0">명</label></td>
+      </tr>
+      <tr>
+        <td><label> D <input type="number" min="0" id="grade_D" value="0">명</label></td>
+        <td><label> F <input type="number" min="0" id="grade_F" value="0">명</label></td>
+        <td><button type="button" name="button" onclick="draw()">차트 그리기</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <canvas id="canvas" width="600" height="450" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+
+    var grdA, grdB, grdC, grdD, grdF;
+    var total;
+    var srtR;
+    var endR = 0;
+
+    var color = ["blue", "green", "yellow", "magenta", "red"];
+    var grade = ["A", "B", "C", "D", "F"]
+
+    function draw() {
+      grdA = parseInt(document.getElementById("grade_A").value);
+      grdB = parseInt(document.getElementById("grade_B").value);
+      grdC = parseInt(document.getElementById("grade_C").value);
+      grdD = parseInt(document.getElementById("grade_D").value);
+      grdF = parseInt(document.getElementById("grade_F").value);
+
+      total = grdA + grdB + grdC + grdD + grdF;
+      context.clearRect(0, 0, cvs.width, cvs.height);
+      // console.log(grdA/total);
+      // console.log(grdB/total);
+      // console.log(grdC/total);
+      // console.log(grdD/total);
+      // console.log(grdF/total);
+      var rad = [grdA, grdB, grdC, grdD, grdF];
+      context.font = "15px Gothic";
+
+
+      for (var i = 0; i < rad.length; i++) {
+        context.fillStyle = color[i];
+        context.fillText(grade[i] + "학점 " + (rad[i] / total * 100).toFixed(1) + "% : " + color[i], 20, 20 + (i * 15));
+
+        srtR = endR;
+        endR = srtR + (rad[i] / total);
+
+        context.beginPath();
+        context.moveTo(300, 225);
+        context.arc(300, 225, 150, srtR * 2 * Math.PI, endR * 2 * Math.PI, false);
+        console.log(srtR + ", " + endR);
+
+        context.fillStyle = color[i];
+        context.fill();
+
+      }
+    }
+
+    // function rst() {
+    //   context.clearRect(0, 0, cvs.width, cvs.height);
+    //   context.beginPath();
+    // }
+  </script>
+</body>
+
+</html>

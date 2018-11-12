@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>논리연산</title>
+  <script type="text/javascript">
+    function logic() {
+      var x = document.getElementById("x").value;
+      var y = document.getElementById("y").value;
+
+      document.write("x = " + x + ", y = " + y + "<br>");
+      document.write("x && y : " + (x && y) + "<br>");
+      document.write("x || y : " + (x || y) + "<br>");
+      document.write("!x : " + (!x) + "<br>");
+      document.write("<hr>");
+      document.write("(3 > 2) && (3 < 4) : " + ((3 > 2) && (3 < 4)) + "<br>");
+      document.write("(3 == 2) || (-1 < 0) : " + ((3 == 2) || (-1 < 0)));
+    }
+  </script>
+</head>
+
+<body>
+  x : <select id="x">
+      <option value="true" selected>true</option>
+      <option value="false">false</option>
+    </select> y : <select id="y">
+      <option value="true" selected>true</option>
+      <option value="false">false</option>
+    </select>
+  <button type="button" name="button" onclick="logic()">계산</button>
+</body>
+
+</html>

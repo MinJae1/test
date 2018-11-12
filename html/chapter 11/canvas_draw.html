@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>캔버스 그리기</title>
+</head>
+
+<body>
+  <canvas id="canvas" width="300" height="300" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+
+    context.beginPath();
+    context.strokeStyle = "blue";
+    context.rect(100, 100, 100, 100);
+    context.stroke();
+
+    context.beginPath();
+    context.fillStyle = "violet";
+    context.rect(112.5, 112.5, 75, 75);
+    context.fill();
+
+    context.font="20px Gothic"
+    context.fillStyle = "green";
+    context.fillText("text in canvs", 95, 150);
+  </script>
+</body>
+
+</html>

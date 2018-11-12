@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>10-5</title>
+  <script type="text/javascript">
+    var timerID = null;
+
+    // function startTimer(t) {
+    //   timerID = setTimeout("now_time()", t);
+    // }
+
+    function now_time(t) {
+      var page_clk = document.getElementById("clock");
+      var nowtime = new Date();
+      //
+      // clearTimeout();
+
+      // console.log(nowtime);
+      page_clk.style.background = "#A9D0F5";
+      page_clk.style.width  = "400px"
+      page_clk.style.padding = "2px"
+      page_clk.innerHTML = nowtime;
+
+      setTimeout("now_time()", t);
+    }
+  </script>
+</head>
+
+<body onload="now_time(1000)">
+  <h3>div태그에 시계만들기</h3>
+  <hr>
+  <div id="clock">
+
+  </div>
+</body>
+
+</html>

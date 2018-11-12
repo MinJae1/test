@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>9-6</title>
+  <script type="text/javascript">
+    // var myimg;
+
+    function img_resize(e, obj) {
+      // myimg = document.getElementById('img')
+      // alert("마우스 휠작동");
+      // var wid = parseInt(obj.width);
+      // var hei = parseInt(obj.height);
+      console.log(">>>>" + obj.width + " " + obj.height);
+
+      if (e.wheelDelta < 0) {
+        obj.width = obj.width * 0.95;
+        obj.height = obj.height * 0.95;
+
+        console.log(">>>>" + obj.width + " " + obj.height);
+        // if (obj.width < 0) {
+        //   obj.width = 0;
+        //   obj.height = 0;
+        // }
+      } else {
+        obj.width = obj.width * 1.05;
+        obj.height = obj.height * 1.05;
+
+        console.log(">>>>" + obj.width + " " + obj.height);
+        // alert(hei);
+      }
+      // obj.width = wid;
+      // obj.height = obj.height;
+      // console.log(">>>>" + obj.width + " " + obj.height);
+    }
+  </script>
+</head>
+
+<body>
+  <h3>마우스 휠을 이용한 이미지 확대/축소</h3>
+  <hr> 이미지위에 마우스를 올리고 휠을 위로 굴리면 이미지가 축소, 아래로굴리면 확대<br>
+  <img src="media/tulips.png" width="80px" height="65px" alt="." onmousewheel="img_resize(event,this)">
+</body>
+
+</html>

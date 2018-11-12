@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>oncontextmenu</title>
+    <script type="text/javascript">
+      function hidemenu() {
+        alert("<컨텍스트 메뉴>클릭 금지(오른쪽 마우스 금지)");
+        return false;
+      }
+      document.oncontextmenu =hidemenu;
+    </script>
+  </head>
+  <body>
+    마우스 오른쪽 버튼 클릭 금지. 클릭시 경고문 <br>
+    <img src="media/beach2.png" alt="miami">
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>이벤트의 디폴트 행동 취소</title>
+  <script type="text/javascript">
+    function query() {
+      var ret = confirm("네이버로 이동하시겠습니까?");
+      return ret;
+    }
+
+    function noAction(e) {
+      e.preventDefualt();
+    }
+  </script>
+</head>
+
+<body>
+  <a href="" onclick="return query()">네이버</a>
+  <hr>
+  <form>
+    <input type="checkbox" checked>빵<br>
+    <input type="checkbox" onclick="noAction(event)">술(체크안됨)<br>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%@ include file="/view/shop_head.jsp"%>
+
+
+<script type="text/javascript">
+	function fn(pid, cid, chk) {
+		if (cid == 0) {
+			alert('로그인 해주세요!');
+			} else {
+				var quan = $('#quantity').val();
+				if (quan == null || quan == 0) {
+					alert('수량을 입력해 주세요');
+					} else {
+					if (chk == 1) {
+						document.location.href = "<%=cPath%>/view/control/shop_control.jsp?action=cart&pid=" + pid
+								+ "&q=" + quan + "&cid=" + cid;
+						alert('상품이 장바구니에 담겼습니다.');
+					} else {
+						document.location.href = "<%=cPath%>/view/control/shop_control.jsp?action=order&pid=" + pid
+						+ "&q=" + quan + "&cid=" + cid;
+						alert('상품 주문이 완료되었습니다.');
+					}
+				}
+		}
+	}
+</script>
+
+
+<div align="center">
+	<c:set value="${item}" var="item"></c:set>
+	<table class="table">
+		<tr height="200" align="center">
+			<td colspan="2"><img src="../../img/${item.img}"
+				style="height: 200px;"></td>
+		</tr>
+		<tr align="center">
+			<td colspan="2"><h5 style="font-weight: bold;">${item.pName}</h5></td>
+		</tr>
+		<tr align="center">
+			<td colspan="2">${item.pPrice}</td>
+		</tr>
+		<tr>
+			<td width="100">수량</td>
+			<td><input type="text" class="form-control" id="quantity"></td>
+		</tr>
+		<tr align="center">
+			<td colspan="2"><button class="btn btn-default"
+					onclick="javascript:fn(${item.pId},${cid},1)" role="button">장바구니</button>
+				<button class="btn btn-default"
+					onclick="javascript:fn(${item.pId},${cid},2)" role="button">바로구매</button>
+			<td>
+		</tr>
+		<tr align="center">
+			<td colspan="2">${item.pDetail}</td>
+		</tr>
+	</table>
+</div>
+<%@ include file="/view/shop_footer.jsp"%>

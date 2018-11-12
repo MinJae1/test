@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>radio button</title>
+  <script type="text/javascript">
+    function findChecked() {
+      var found = null;
+      var kcity = document.getElementsByName("city");
+
+      for (var i = 0; i < kcity.length; i++) {
+        if (kcity[i].checked == true) {
+          found = kcity[i];
+        }
+      }
+      if (found != null) {
+        alert(found.value + "이 선택됨");
+      } else {
+        alert("선택된것이 없음");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form class="" action="index.html" method="post">
+    <input type="radio" name="city" value="seoul" checked>서울
+    <input type="radio" name="city" value="busan">부산
+    <input type="radio" name="city" value="chunchen">춘천
+    <input type="button" value="find checked" onclick="findChecked()">
+  </form>
+</body>
+
+</html>

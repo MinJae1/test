@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>11-5</title>
+  <style media="screen">
+    td {
+      text-align: right;
+      padding: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>폼으로 사각형 그리기</h3>
+  <hr>
+  <table>
+    <tbody>
+      <tr>
+        <td>x</td>
+        <td><input type="text" id="srtX"></td>
+        <td>y</td>
+        <td><input type="text" id="srtY"></td>
+      </tr>
+      <tr>
+        <td>width</td>
+        <td><input type="text" id="wid"></td>
+        <td>height</td>
+        <td><input type="text" id="hei"></td>
+      </tr>
+      <tr>
+        <td>선굵기</td>
+        <td><input type="text" id="lineWid"></td>
+        <td></td>
+        <td>선색<input type="color" id="lineC"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="button" name="button" onclick="draw()">그리기</button></td>
+        <td></td>
+        <td><button type="button" name="button" onclick="rst()">지우기</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <canvas id="canvas" width="500" height="300" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+
+    var X, Y, WID, HEI, LINEWID, LINEC;
+
+
+    function draw() {
+      X = document.getElementById("srtX").value;
+      Y = document.getElementById("srtY").value;
+      WID = document.getElementById("wid").value;
+      HEI = document.getElementById("hei").value;
+      LINEWID = document.getElementById("lineWid").value;
+      LINEC = document.getElementById("lineC").value;
+
+      // console.log(X+", "+Y+", "+WID+", "+HEI+", "+LINEC+", "+LINEWID);
+      context.beginPath();
+      context.rect(X, Y, WID, HEI);
+      context.strokeStyle = LINEC;
+      context.lineWidth = LINEWID;
+      context.stroke();
+    }
+
+    function rst() {
+      context.clearRect(0, 0, cvs.width, cvs.height);
+      context.beginPath();
+    }
+  </script>
+</body>
+
+</html>

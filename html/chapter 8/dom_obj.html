@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML DOM 트리</title>
+</head>
+
+<body>
+  <p id="firstP" style="color:blue; background:yellow" onclick="this.style.color='teal'">이것은<span style="color:red">문장입니다.</span></p>
+  <script type="text/javascript">
+    var p = document.getElementById("firstP");
+    var text = "p.id = " + p.id + "\n";
+    text += "p.tagname = " + p.tagname + "\n";
+    text += "p.innerHTML = " + p.innerHTML + "\n";
+    text += "p.style.color = " + p.style.color + "\n";
+    text += "p.onclick = " + p.onclick + "\n";
+    text += "p.childElementCount = " + p.childElementCount + "\n";
+    text += "너비 = " + p.offsetWidth + "\n";
+    text += "높이 = " + p.offsetHeight + "\n";
+
+    alert(text);
+  </script>
+</body>
+
+</html>

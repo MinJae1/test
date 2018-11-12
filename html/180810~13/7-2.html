@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>7-2</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var n = [];
+    for (var i = 0; i < 5; i++) {
+      n[i] = prompt("정수입력", 0);
+    }
+    document.write("<h3>정수 5개 입력 받아 역순 출력</h3>");
+    document.write("<hr>");
+
+    document.write("입력된 수의 배열<br>");
+    for (var i = 0; i < 5; i++) {
+      document.write(n[i] + " ");
+    }
+    document.write("<hr>");
+    document.write("역순 재정렬 배열<br>");
+    var re_n = n.reverse();
+    // for (var i = 4; i < 0; i--) {
+      document.write(re_n);
+    // }
+  </script>
+</body>
+
+</html>

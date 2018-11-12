@@ -1,0 +1,33 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" errorPage="../../error/error.jsp"%>
+
+<%@ include file="/view/shop_head.jsp"%>
+<table class="table" onclick="javascript:detail(${msgs.pId},${cid})">
+	<thead>
+		<tr>
+			<th>상품번호</th>
+			<th>상품명</th>
+			<th>이미지</th>
+			<th>가격</th>
+			<th>카테고리</th>
+		</tr>
+	</thead>
+	<c:forEach var="msgs" items="${plist}" varStatus="mcnnt">
+		<tbody>
+			<tr>
+				<td>${msgs.pId}</td>
+				<td>${msgs.pName}</td>
+
+				<td height="100" width="100" align="center"><img
+					src="../../img/${msgs.img}" style="height: 100px;"></td>
+
+				<td><fmt:formatNumber value="${msgs.pPrice}"
+						pattern="###,###,###" /></td>
+			</tr>
+		</tbody>
+	</c:forEach>
+</table>
+
+<%@ include file="/view/shop_footer.jsp"%>
+

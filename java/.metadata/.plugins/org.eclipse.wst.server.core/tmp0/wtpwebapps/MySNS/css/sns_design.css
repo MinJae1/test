@@ -1,0 +1,27 @@
+a {
+	text-decoration: none;
+	color: #A4A4A4;
+}
+
+footer, header, nav, section {
+	display: block
+}
+
+#menu {
+	background-color: #CEE3F6;
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	float: left;
+	line-height: normal;
+	padding: 10px;
+}
+
+header, footer {
+	background-color: #CEE3F6;
+}

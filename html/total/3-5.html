@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>도형서식폼 만들기</title>
+</head>
+
+<body>
+  <h3>도형서식폼 만들기</h3>
+  <hr>
+  <fieldset>
+    <legend>도형 서식 입력</legend>
+    <label>선종류</label> <select size="3">
+        <option value="none">선없음</option>
+        <option value="solid">실선</option>
+        <option value="dotted">점선</option>
+      </select><br><br>
+    <label>선두께</label> <input type="number"> 선색 <input type="color"><br><br>
+    <label>투명도(0~100)</label> <input type="range" min="0" max="100" list="transparency">
+    <datalist id="transparency">
+        <option value="0" label="clear"></option>
+        <option value="50" label="middle"></option>
+        <option value="100" label="opaque"></option>
+      </datalist>
+  </fieldset>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 5 elements to &apos;BankApplication/src/app&apos;&#x0D;&#x0A;- Original project: &apos;BankApp&apos;&#x0D;&#x0A;- Destination element: &apos;BankApplication/src/app&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     app.UpdateAcc.java&#x0D;&#x0A;     app.Account.java&#x0D;&#x0A;     app.BankApp.java&#x0D;&#x0A;     app.AccList.java&#x0D;&#x0A;     app.CreateAcc.java" description="Copy compilation units" destination="=BankApplication/src&lt;app" element1="/src&lt;app{UpdateAcc.java" element2="/src&lt;app{Account.java" element3="/src&lt;app{BankApp.java" element4="/src&lt;app{AccList.java" element5="/src&lt;app{CreateAcc.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1536554539532" units="5" version="1.0"/>
+</session>

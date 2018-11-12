@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>9-9</title>
+  <style media="screen">
+    div {
+      width: 150px;
+      height: 90px;
+      visibility: hidden;
+    }
+  </style>
+  <script type="text/javascript">
+    var sel = document.getElementsByTagName("li");
+    var ex;
+    var ex_text = "";
+
+    var mX = 0;
+    var mY = 0;
+
+    function onmse(e, obj) {
+
+      ex = document.getElementById("explan");
+
+      mX = e.clientX;
+      mY = e.clientY + document.body.scrollTop;
+
+
+      ex.style.left = mX + 'px';
+      ex.style.top = mY + 'px';
+
+
+
+      // for (var i = 0; i < sel.length; i++) {
+      //   if (i == obj.value) {
+          switch (obj.value) {
+            case 0:
+            ex.style.visibility = "visible";
+            ex.style.background = "linen";
+            ex_text = "자전거로 대한 민국 주요 도시(서울 대전 대구 부산) 일주하기"
+            ex.innerHTML = ex_text;
+              break;
+            case 1:
+            ex.style.visibility = "visible";
+            ex.style.background = "linen";
+            ex_text= "웹 프로그래밍과 자바 관련 서적 100권 읽기"
+            ex.innerHTML = ex_text;
+              break;
+            case 2:
+            ex.style.visibility = "visible";
+            ex.style.background = "linen";
+            ex_text = "철인 3종(수영 마라톤 @@)참여하기"
+            ex.innerHTML = ex_text;
+              break;
+            case 3:
+            ex.style.visibility = "visible";
+            ex.style.background = "linen";
+            ex_text = "자바스크립트 공부하기"
+            ex.innerHTML = ex_text;
+              break;
+            default: break;
+          }
+        // } else {
+        //   ex.style.visibility = "hidden";
+        // }
+      // }
+
+    }
+
+
+    // function explanation() {
+    //   var ex = document.getElementById("explan");
+    //
+    // }
+    // explanation();
+  </script>
+</head>
+
+<body>
+  <h3>아이템에 마우스를 올리면 설명출력</h3>
+  <hr>
+  <p>여름방학때 하고싶은것</p>
+  <ul>
+    <li onmouseover="onmse(event,this)" value="0">자전거로 대한민국 일주</li>
+    <li onmouseover="onmse(event,this)" value="1">책 100권읽기</li>
+    <li onmouseover="onmse(event,this)" value="2">철인 3종경기</li>
+    <li onmouseover="onmse(event,this)" value="3">자바 스크립트 정복</li>
+  </ul>
+  <div id="explan" style="position: absolute;left: 0;top: 0;">
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>방문 시간에따라 변하는 배경</title>
+</head>
+
+<body>
+<h3>  방문시간이 오전 : lightskyblue , 방문시간이 오후 : orange</h3>
+<hr>
+  <script type="text/javascript">
+    var current = new Date();
+
+    if (current.getHours() <12) {
+      document.body.style.backgroundColor = "lightskyblue";
+    } else {
+      document.body.style.backgroundColor = "orange";
+    }
+
+    document.write("현재시간 : ");
+    document.write("" + current.getHours() + "시 ");
+    document.write("" + current.getMinutes() + "분 ");
+    document.write("" + current.getSeconds() + "초<br>");
+  </script>
+</body>
+
+</html>

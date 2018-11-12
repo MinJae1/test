@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>13-4</title>
+</head>
+
+<body>
+  <h3>오디오 재생</h3>
+  <p>듣고싶은 곡을 선택하시고 시작버튼을 누르면 연속하여 자동연주합니다.</p>
+  <hr>
+  <audio id="audio" src="" controls>
+    	웹 브라우저가 audio 태그를 지원하지 않습니다.
+    </audio><br>
+  <input type="checkbox" name="sound" value="0">애국가<br>
+  <input type="checkbox" name="sound" value="1">Moon Glow<br>
+  <input type="checkbox" name="sound" value="2">Embraceable You<br>
+  <button type="button" name="button" onclick="play()">연주시작</button>
+
+  <script type="text/javascript">
+    var new_audio = document.getElementById("audio");
+    var audio_src = ["media/Aegukga.mp3", "media/MoonGlow.mp3", "media/EmbraceableYou.mp3"];
+    // var val_list = new Array();
+    var select_list = document.getElementsByName("sound");
+    var sound_list = new Array();
+    var val = 0;
+
+    function play() {
+      console.log(select_list.length);
+      var j = 0;
+      for (var i = 0; i < select_list.length; i++) {
+        if (select_list[i].checked) {
+          sound_list[j] = audio_src[select_list[i].value];
+          console.log(sound_list[j]);
+          j++;
+        }
+
+      }
+
+      console.log(sound_list.length);
+      new_audio.src = sound_list[0];
+      new_audio.load();
+      new_audio.play();
+
+    }
+
+    new_audio.onended = function(e) {
+      val++;
+      new_audio.src = sound_list[val];
+      new_audio.load();
+      new_audio.play();
+      console.log(sound_list[val]);
+    }
+  </script>
+</body>
+
+</html>

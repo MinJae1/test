@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>screen()</title>
+  <script type="text/javascript">
+    var d;
+
+    function printscreen() {
+      d = document.getElementById("div");
+      var text = "<span>availHeight : </span>" + screen.availHeight + "<br>";
+      text += "<span>availWidth : </span>" + screen.availWidth + "<br>";
+      text += "<span>colorDepth : </span>" + screen.colorDepth + "<br>";
+      text += "<span>pixelDepth : </span>" + screen.pixelDepth + "<br>";
+      text += "<span>height : </span>" + screen.height + "<br>";
+      text += "<span>width : </span>" + screen.width + "<br>";
+
+      console.log(text);
+
+      d.innerHTML = text;
+    }
+  </script>
+</head>
+
+<body onload="printscreen()">
+  <div id="div"></div>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>9-2</title>
+    <script type="text/javascript">
+    function selImage() {
+      var sel = document.getElementsByName("fruit");
+      var img = document.getElementById("fruitimage");
+      var chk = null;
+
+      for (var i = 0; i < sel.length; i++) {
+        if (sel[i].checked == true) {
+          chk = sel[i].value;
+        }
+      }
+
+      img.src = chk;
+    }
+
+    </script>
+  </head>
+  <body onload="selImage()">
+    <h3>라디오버튼을 클릭하면 이미지를 출력합니다.</h3>
+    <hr>
+    <form class="" action="index.html" method="post">
+      <input type="radio" name="fruit" value="media/apple.png" onclick="selImage()">사과
+      <input type="radio" name="fruit" value="media/banana.png"onclick="selImage()">바나나
+      <input type="radio" name="fruit" value="media/mango.png"onclick="selImage()">망고
+      <img id="fruitimage" src="media/banana.png" alt="">
+    </form>
+
+  </body>
+</html>

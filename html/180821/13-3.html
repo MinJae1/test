@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>13-3</title></head>
+<body>
+	<h3>애국가 연주</h3>
+	<hr>
+<audio id="audio" src="media/Aegukga.mp3"
+		autoplay controls>
+	웹 브라우저가 audio 태그를 지원하지 않습니다.
+</audio>
+<script type="text/javascript">
+	var new_audio = document.getElementById("audio");
+	new_audio.onended = function (e) {
+		var ans = confirm("다시 할까요?");
+		if (ans == true) {
+			new_audio.load();
+			new_audio.play();
+		}
+	}
+</script>
+</body>
+</html>

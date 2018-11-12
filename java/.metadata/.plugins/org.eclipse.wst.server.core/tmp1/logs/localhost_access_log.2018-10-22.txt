@@ -1,0 +1,15 @@
+127.0.0.1 - - [22/Oct/2018:17:16:48 +0900] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:16:48 +0900] "GET /MySNS/sns_main.jsp HTTP/1.1" 200 701
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:16:48 +0900] "GET /MySNS/css/sns_design.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:17:09 +0900] "GET /MySNS/sns_main.jsp HTTP/1.1" 200 701
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:32:20 +0900] "GET /MySNS/sns_main.jsp HTTP/1.1" 200 773
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:32:20 +0900] "GET /MySNS/css/sns_design.css HTTP/1.1" 200 9389
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:32:20 +0900] "GET /MySNS/css/images/colbg.png HTTP/1.1" 404 1112
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:40:42 +0900] "GET /MySNS/sns_main.jsp HTTP/1.1" 200 773
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:40:42 +0900] "GET /MySNS/css/sns_design.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:40:42 +0900] "GET /MySNS/css/images/colbg.png HTTP/1.1" 404 1112
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:47:19 +0900] "GET /MySNS/sns_main.jsp HTTP/1.1" 200 1598
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:47:19 +0900] "GET /MySNS/css/sns_design.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:47:19 +0900] "GET /MySNS/css/images/colbg.png HTTP/1.1" 404 1112
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:47:44 +0900] "GET /MySNS/sns_main.jsp HTTP/1.1" 200 1582
+0:0:0:0:0:0:0:1 - - [22/Oct/2018:17:47:44 +0900] "GET /MySNS/css/images/colbg.png HTTP/1.1" 404 1112

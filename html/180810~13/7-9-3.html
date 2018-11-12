@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>7-9-2</title>
+  <script type="text/javascript">
+    function Book(name, person, price) {
+      this.name = name;
+      this.person = person;
+      this.price = price;
+
+    }
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    document.write("<h3>book객체만들기</h3>");
+    document.write("<hr>");
+
+    var book = new Book("HTML5", "황기태", 20000);
+    document.write("book : ");
+    document.write(book.name + ", ");
+    document.write(book.person + ", ");
+    document.write(book.price + "<br>");
+  </script>
+</body>
+
+</html>

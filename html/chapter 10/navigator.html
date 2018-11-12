@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>navigator</title>
+    <style media="screen">
+      span{
+        color: red;
+      }
+      div{
+        border-color: yellowgreen;
+      }
+    </style>
+    <script type="text/javascript">
+      function printnavigator() {
+        var text = "<span>appCodeName</span>"+navigator.appCodeName+"<br>";
+        text += "<span>appName</span>"+navigator.appName+"<br>";
+        text += "<span>appVersion</span>"+navigator.appVersion+"<br>";
+        text += "<span>cookieEnabled</span>"+navigator.cookieEnabled+"<br>";
+        text += "<span>geolocation</span>"+navigator.geolocation+"<br>";
+        text += "<span>language</span>"+navigator.language+"<br>";
+        text += "<span>onLine</span>"+navigator.onLine+"<br>";
+        text += "<span>platform</span>"+navigator.platform+"<br>";
+        text += "<span>product</span>"+navigator.product+"<br>";
+        text += "<span>userAgent</span>"+navigator.userAgent+"<br>";
+
+        var div = document.getElementById("div");
+        div.innetHTML = text;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="" id="div">
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>10-6</title>
+  <script type="text/javascript">
+    var timerID = setInterval("now_time()", 1000);
+
+    // function startTimer(t) {
+    //   timerID = setTimeout("now_time()", t);
+    // }
+
+    function now_time(t) {
+      var page_clk = document.getElementById("clock");
+      var nowtime = new Date();
+      //
+      // clearTimeout();
+
+      // console.log(nowtime);
+      page_clk.style.background = "#A9D0F5";
+      page_clk.style.color = "black"
+      page_clk.style.width = "400px"
+      page_clk.style.padding = "2px"
+      page_clk.innerHTML = nowtime;
+
+      // setInterval("now_time()", t);
+    }
+     function stop(s_clk) {
+      if (s_clk.style.color == "lightgray") {
+        setInterval("now_time()", 1000);
+      }else {
+        s_clk.style.color = "lightgray"
+        clearInterval(timerID);
+
+      }
+    }
+
+  </script>
+</head>
+
+<body onload="now_time()">
+  <h3>div태그에 시계만들기</h3>
+  <hr>
+  <div id="clock" onclick="stop(this)">
+
+  </div>
+</body>
+
+</html>

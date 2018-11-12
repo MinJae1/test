@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <canvas id="canvas" width="300" height="420" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+
+    context.fillStyle = "violet";
+    context.fillRect(20, 20, 100, 100);
+
+    context.beginPath();
+    context.fillStyle = "violet";
+    context.rect(20, 150, 100, 100);
+    context.fill();
+
+    context.beginPath();
+    context.strokeStyle = "gray";
+    context.lineWidth = 10;
+    context.stroke();
+
+    // context.beginPath();
+    // context.rect(20, 80, 120, 50);
+    // context.strokeStyle = "yellowgreen";
+    // context.stroke();
+
+    context.beginPath();
+    context.strokeStyle = "violet";
+    context.moveTo(80, 340);
+    context.arc(80, 340, 50, 0, 1.5 * Math.PI, false);
+    context.closePath();
+
+    context.fillStyle = "yellowgreen";
+    context.fill();
+
+    context.strokeStyle = "gray";
+    context.lineWidth = 20;
+    context.stroke();
+  </script>
+</body>
+
+</html>

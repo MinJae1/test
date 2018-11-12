@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>switch</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    document.write("점수 : <input type='text' value='' id='score' style='width:60px'> <button type='button' name='button' onclick='cases()'>계산</button><br>");
+
+    function cases() {
+      var score = document.getElementById("score").value;
+      var sc = Math.floor(score / 10);
+      var grade;
+
+      switch (sc) {
+        case 10:
+        case 9:
+          grade = 'A';
+          break;
+        case 8:
+          grade = 'B';
+          break;
+        case 7:
+          grade = 'C';
+          break;
+        case 6:
+          grade = 'D';
+          break;
+        default:
+          grade = 'F';
+
+      }
+      document.write(document.getElementById("score").value + " 는 " + grade);
+    }
+  </script>
+</body>
+
+</html>

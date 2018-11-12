@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>10-9</title>
+  <script type="text/javascript">
+    function resolution() {
+      console.log(screen.height + ", " + screen.width);
+      if (screen.height < 1024 || screen.width < 1280) {
+        alert("스크린해상도가 낮습니다.");
+      }
+    }
+  </script>
+</head>
+
+<body onload="resolution()">
+  <h3>screen 객체 활용</h3>
+  <hr> 스크린 해상도가 1280*1024보다 작은경우 웹 페이지가 정상적으로 출력되지 않을수 있음을 알리는 경고창을 출력한다.
+</body>
+
+</html>

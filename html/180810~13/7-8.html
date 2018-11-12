@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>7-8</title>
+  <style media="screen">
+    div {
+      display: inline-block;
+      width: 150px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    for (var i = 0; i < 16; i++) {
+      var co = Math.round(Math.random() * 0xFFFFFF).toString(16);
+      var code = "#" + co;
+      var hex_r = parseInt("0x" + co.toString().substring(0, 2));
+      var hex_g = parseInt("0x" + co.toString().substring(2, 4));
+      var hex_b = parseInt("0x" + co.toString().substring(4, 6));
+      var r = hex_r.toString(10);
+      var g = hex_g.toString(10);
+      var b = hex_b.toString(10);
+
+      document.write("<div style='background-color:" + code + "'> rgb( " + r + ", " + g + ", " + b + " ) </div>")
+    }
+  </script>
+</body>
+
+</html>

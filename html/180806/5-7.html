@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>transition</title>
+  <style media="screen">
+    #spong {
+      width: 200px;
+      height: 200px;
+    }
+
+    #spong:hover {
+      animation-name: big;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes big {
+      from {
+        width: 200px;
+      }
+      to {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h3>마우스를 올려보세요</h3>
+  <hr>
+  <img src="media/spongebob.png" alt="스펀지밥" id="spong">
+</body>
+
+</html>

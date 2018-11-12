@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>break문</title>
+</head>
+
+<body>
+  최대 값 : <input type="text" value="" id="max" style="width:65px"> <button type="button" name="button" onclick="max_sum()">계산</button>
+  <script type="text/javascript">
+  function max_sum() {
+    var i = 0,
+      max = document.getElementById('max').value,
+      sum = 0;
+    while (true) {
+      sum += i;
+      if (sum > max) {
+        break;
+      }
+      i++;
+    }
+    document.write(i + " 까지 더하면 " + max + "을 넘음 : " + sum);
+  }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+1540426100337	Move 7 resources to 'lib'
+1540426107733	Copy files
+1540426511505	Delete elements
+1540430027131	Delete elements
+1540446368853	Rename package 'mysns.util'
+1540446579267	Delete element
+1540450692066	Delete elements
+1540451875252	Rename type 'SaleDO'
+1540454317653	Delete element
+1540454338043	Delete element
+1540455686071	Delete element
+1540456531765	Rename resource 'sns_control.jsp'
+1540514479706	Encapsulate field 'pDetail'
+1540520185061	Encapsulate field 'id'
+1540522631317	Rename resource 'mOrderLsit.jsp'
+1540522800071	Delete elements
+1540533948732	Encapsulate field 'pQuantity'
+1540539328422	Encapsulate field 'oId'
+1540539331198	Encapsulate field 'pName'
+1540539333645	Encapsulate field 'pQuantity'
+1540539337776	Encapsulate field 'pPrice'
+1540539341727	Encapsulate field 'oPrice'
+1540539450589	Encapsulate field 'cnt'

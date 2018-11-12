@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>프로토타입 연습</title>
+  <script type="text/javascript">
+    function Student(name, phone, score) {
+      var academy = "이젠";
+      this.name = name;
+      this.phone = phone;
+      this.score = score;
+
+      this.getGrade = function() {
+        // var sc = Math.floor(score / 10);
+        // var grade;
+
+        switch (Math.floor(this.score / 10)) {
+          case 10:
+          case 9:
+            return 'A';
+            break;
+          case 8:
+            return 'B';
+            break;
+          case 7:
+            return 'C';
+            break;
+          case 6:
+            return 'D';
+            break;
+          default:
+            return 'F';
+
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var st = new Student("이름", "phone-nember", 85);
+
+    document.write(st.academy + " 이름 : " + st.name + " 전화번호 : " + st.phone + " 등급 : " + st.getGrade());
+  </script>
+</body>
+
+</html>

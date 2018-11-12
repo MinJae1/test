@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <canvas id="canvas" width="300" height="300" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+
+
+    context.beginPath();
+    for (var i = 0; i < 5; i++) {
+      var co = Math.round(Math.random() * 0xFFFFFF).toString(16);
+      var code  = "#" + co;
+      context.rect(10 + i * 30, 10 + i * 10, 50, 50);
+      context.strokeStyle = code;
+      context.stroke()
+    }
+  </script>
+</body>
+
+</html>

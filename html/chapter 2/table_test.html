@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>표만들기</title>
+
+</head>
+
+<body>
+
+<table border="1">
+  <caption>표제목</caption>
+  <thead>
+    <tr>
+      <th>머리글행</th><th>테</th><th>스</th><th>트</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>tfoot행</th><th>내용</th><th>내용</th><th>내용</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>내용</td><td>내용</td><td>내용</td><td>내용</td>
+    </tr>
+    <tr>
+      <td>내용</td><td>내용</td><td>내용</td><td>내용</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<table border="1">
+  <caption>합계테스트</caption>
+  <thead>
+    <tr>
+      <th>합계</th><th>항</th><th>목</th><th>합</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>합계</th><th id="row"></th><thid="row"></th><th></th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>테스트</td><td id="a1" value="3">3</td><td id="b1">4</td><td id="add1"></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<table border="1">
+  <caption>colspan(가로셀합치기) & rowspan(세로셀합치기) 활용</caption>
+  <thead>
+<tr>
+  <th>셀합치기테스트</th><th colspan="2">가로2</th><th>가로1</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">세로2</td><td>세로1</td><td>세로1</td><td>세로1</td>
+    </tr>
+    <tr>
+    <td>세로1</td><td>세로1</td><td>세로1</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+<script type="text/javascript">
+  function colsadd(){
+     var a = document.getElementById("a1").value;
+    // document.getElementById("b1").value;
+
+    console.log(">>>>>>> "+a);
+
+    // var cols = a+b
+
+    // System.out.println(">>>>>>"+cols);
+
+    // document.getElementById("add").value = cols;
+  }
+colsadd();
+</script>
+</html>

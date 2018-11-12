@@ -1,0 +1,30 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" errorPage="../../error/error.jsp"%>
+
+<%@ include file="/view/shop_head.jsp"%>
+
+<c:forEach var="msgs" items="${plist}" varStatus="mcnnt">
+	<div class="col-md-4">
+		<table class="table" onclick="javascript:detail(${msgs.pId},${cid})">
+			<thead>
+				<tr>
+					<th>${msgs.pName}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td height="200" width="200" align="center"><img
+						src="../../img/${msgs.img}" style="height: 200px;"></td>
+				</tr>
+				<tr>
+					<td><fmt:formatNumber value="${msgs.pPrice}"
+							pattern="###,###,###" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</c:forEach>
+
+<%@ include file="/view/shop_footer.jsp"%>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>대입연산</title>
+  <script type="text/javascript">
+    // var x = 3,
+    //   y = 3,
+    //   z = 3;
+    function subs() {
+      var x = document.getElementById("x").value;
+      var y = document.getElementById("y").value;
+      var z = document.getElementById("z").value;
+
+      document.write("x = " + x + ", y = " + y);
+      document.write(", z = " + z + "<br><br>");
+
+      x += 3;
+      y *= 3;
+      z %= 3;
+
+      document.write("x += 3 실행후, x = " + x + "<br>");
+      document.write("y *= 3 실행후, y = " + y + "<br>");
+      document.write("z %= 3 실행후, z = " + z + "<br>");
+    }
+  </script>
+
+</head>
+
+<body>
+  x : <input type="text" value="" id="x" style="width:60px"> y : <input type="text" value="" id="y" style="width:60px"> z : <input type="text" value="" id="z" style="width:60px">
+  <button type="button" name="button" onclick="subs()">계산</button>
+</body>
+
+</html>

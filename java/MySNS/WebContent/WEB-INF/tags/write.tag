@@ -1,0 +1,27 @@
+<%@ tag language="java" pageEncoding="UTF-8" body-content="scriptless"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ attribute name="type"%>
+
+<c:if test="${uid != null}">
+	<c:choose>
+		<c:when test="${type == 'msg'}">
+			<input type="text" name="msg" maxlength="100">
+		</c:when>
+		<c:when test="${type == 'rmsg'}">
+Comment <input type="text" name="rmsg" maxlength="50" size="60">
+		</c:when>
+	</c:choose>
+</c:if>
+
+<c:if test="${uid == null}">
+	<c:choose>
+		<c:when test="${type == 'msg'}">
+			<input type="text" name="msg" maxlength="100" disabled="disabled"
+				value="Please Login!!!">
+		</c:when>
+		<c:when test="${type =='rmsg'}">
+Comment <input type="text" name="rmsg" maxlength="50" size="60"
+				disabled="disabled" value="Please Login!!!">
+		</c:when>
+	</c:choose>
+</c:if>

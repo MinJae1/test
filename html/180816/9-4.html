@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>9-4</title>
+
+  <script type="text/javascript">
+    var idiv ;
+    var mX = 0;
+    var mY = 0;
+
+    function imgcursor(e) {
+    idiv  = document.getElementById("imgdiv")
+      // idiv.style.display = ""
+      mX = e.clientX;
+      mY = e.clientY + document.body.scrollTop;
+
+      // var imgx = parseInt(idiv.style.left);
+      // var imgy = idiv.style.top;
+
+      idiv.style.left = mX + 'px';
+      idiv.style.top = mY + 'px';
+    }
+    document.onmousemove = imgcursor;
+  </script>
+</head>
+
+<body onmousemove="imgcursor(event)">
+  <h3>이미지 커서 만들기</h3>
+  <hr> 마우스를 움직이면 이미지로 만든커서가 마우스를 따라다닙니다.
+  <div id="imgdiv" style="position: absolute;left: 0;top: 0;">
+    <img src="media/spongebob.png" alt="" width="30" height="30">
+  </div>
+</body>
+
+</html>

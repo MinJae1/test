@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>9-8</title>
+  <script type="text/javascript">
+    // function load() {
+    var sel = document.getElementsByTagName("li");
+    // for (var i = 0; i < sel.length; i++) {
+    //   sel[i].addEventListener("click", sel_li);
+    //
+    // }
+    //
+    // alert("load");
+    // }
+
+    function sel_li(obj) {
+      for (var i = 0; i < sel.length; i++) {
+        if (i == obj.value) {
+          obj.style.fontSize = "1.3em";
+        } else {
+          sel[i].style.fontSize = "1em";
+        }
+      }
+
+    }
+    // load();
+  </script>
+</head>
+
+<body>
+  <h3>아이템을 클릭하면 1.3배 크기로</h3>
+  <hr>
+  <p>여름방학때 하고싶은것</p>
+  <ul>
+    <li onclick="sel_li(this)" value="0">자전거로 대한민국 일주</li>
+    <li onclick="sel_li(this)" value="1">책 100권읽기</li>
+    <li onclick="sel_li(this)" value="2">철인 3종경기</li>
+    <li onclick="sel_li(this)" value="3">자바 스크립트 정복</li>
+  </ul>
+</body>
+
+</html>

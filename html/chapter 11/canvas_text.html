@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <canvas id="canvas" width="500" height="400" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+
+    for (var i = 0; i < 4; i++) {
+      var co = Math.round(Math.random() * 0xFFFFFF).toString(16);
+      var code  = "#" + co;
+      context.strokeStyle = code;
+
+      context.font = (10 + i * 10) + "px forte";
+      context.strokeText("Javascript", 10, 30 + i * 50);
+    }
+
+    context.font = "italic 50px forte";
+    context.strokeStyle = "magenta";
+    context.lineWidth = 3;
+    context.textAlign = "left";
+    context.strokeText("Javascript", 50, 250);
+
+    context.fillStyle = "green";
+    context.textAlign = "right";
+    context.fillText("Javascript", 490, 300);
+  </script>
+</body>
+
+</html>

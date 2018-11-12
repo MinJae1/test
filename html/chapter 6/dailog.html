@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>dialog</title>
+    <script type="text/javascript">
+    function pro() {
+      var prom = prompt("Name","이름");
+      if (prom == null) {
+        //취소버튼이나 다이얼로그를 닫음
+      } else if (prom == "") {
+        //문자열 입력없이 확인버튼 누름
+      } else {
+        //사용자가 입력한 문자열
+        document.getElementById("name").value = prom;
+      }
+    }
+
+    function check() {
+      var con = confirm("확인 다이얼로그");
+      if (con == true) {
+        //확인버튼 클릭시
+      } else {
+        //취소버튼이나 닫힘버튼 클릭시
+      }
+    }
+
+    function message() {
+      alert("메세지다이얼로그");
+    }
+    </script>
+  </head>
+  <body>
+    <button type="button" name="button" onclick="pro()">이름</button>
+    <input type="text" id="name" value="" disabled style="border:none; background:white; width:50px">
+    <button type="button" name="button" onclick="check()">확인</button>
+    <button type="button" name="button" onclick="message()">메세지</button>
+  </body>
+</html>

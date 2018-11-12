@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>스톱워치</title>
+</head>
+
+<body>
+  <!-- <button type="button" name="button" onclick=""></button> -->
+  <button type='button' name='button' onclick='start()'>시작</button>
+  <button type='button' name='button' onclick='end()'>종료</button>
+
+  <script type="text/javascript">
+    var s;
+
+    function start() {
+      s = new Date();
+    }
+
+    function end() {
+      var d = new Date();
+
+      document.write("시작시간 : ");
+      document.write(s.toLocaleString() + "." + s.getMilliseconds());
+
+      document.write("<br>종료시간 : ");
+      document.write(d.toLocaleString() + "." + d.getMilliseconds());
+
+      var timegap = d.getTime() - s.getTime();
+      document.write("<br>경과시간 : ");
+      document.write(timegap + " ms");
+    }
+  </script>
+</body>
+
+</html>

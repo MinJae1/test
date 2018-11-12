@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>setInterval()로 텍스트 회전</title>
+  <script type="text/javascript">
+    var span;
+    var timerID = setInterval("doRotate()", 200);
+
+    document.getElementById("span").onclick = function(e) {
+      clearInterVal(timerID);
+    }
+
+    function doRotate() {
+      span = document.getElementById("span");
+      var str = span.innerHTML;
+      var firstChar = str.substr(0, 1);
+      var remains = str.substr(1, str.length - 1);
+      str = remains + firstChar;
+      span.innerHTML = str;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="">
+    <span id="span" style="background-color:yellow">자동회전 텍스트</span>
+  </div>
+</body>
+
+</html>

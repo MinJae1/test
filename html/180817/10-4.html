@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>10-4</title>
+  <script type="text/javascript">
+    function sel_navigator() {
+      console.log(navigator.userAgent + "\n " + navigator.vendor);
+      if (navigator.userAgent.indexOf("Chrome") != -1 && navigator.vendor == "Google Inc.") {
+        alert("구글 크롬 브라우저 입니다.");
+      }
+      else {
+        alert("구글 크롬 브라우저가 아닙니다.");
+      }
+    }
+  </script>
+</head>
+
+<body onload="sel_navigator()">
+  <h3>구글 chrome 브라우저 감별</h3>
+  <hr> 웹브라우저에따라 지원되는 자바 스크립트드리이 달를수도 잇씁니다. dom의 기능을 표준화 되어있더동일하지만 bom객체들은 많이 다릅니다. ㄷ\얼른모두 표준화 되었으면 하지만 독창적인 기능으로 승부하고자 하여 쉽지는 않은것같습니다.
+</body>
+
+</html>

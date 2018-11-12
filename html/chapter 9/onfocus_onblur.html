@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>onfocus & onblur</title>
+  <script type="text/javascript">
+    function checkFilled(obj) {
+      if (obj.value == "") {
+        alert("이름을 입력하지않고 다른창으로 이동할수없습니다.");
+        obj.focus();
+      }
+    }
+  </script>
+</head>
+
+<body onload="document.getElementById('name').focus();">
+  <p>이름을 먼저 입력해야 합니다.</p>
+  <form>
+    이름 <input type="text" id="name" onblur="checkFilled(this)"><br> 학번 <input type="text">
+  </form>
+</body>
+
+</html>

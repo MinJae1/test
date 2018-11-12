@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>11-9</title>
+</head>
+
+<body onload="init()">
+  <h3>mousemove로 자유롭게 그리세요</h3>
+  <hr>
+  <label>선 굵기 : <input type="text" id="lineWid"></label>
+  <label>선 색 : <input type="color" id="lineC"></label>
+  <br>
+  <canvas id="canvas" width="600" height="300" style="background-color:aliceblue"></canvas>
+
+  <script type="text/javascript">
+    var cvs;
+    var context;
+    var wid, color;
+
+    function init() {
+      cvs = document.getElementById("canvas");
+      context = cvs.getContext("2d");
+
+      cvs.addEventListener("mousemove", function(e) {
+        move(e)
+      }, false);
+      cvs.addEventListener("mouseover", function(e) {
+        over(e)
+      }, false);
+      cvs.addEventListener("mouseout", function(e) {
+        out(e)
+      }, false);
+    }
+
+    var startX = 0,
+      startY = 0;
+    var dragging = false;
+
+    function draw(curX, curY) {
+      wid = document.getElementById("lineWid").value;
+      color = document.getElementById("lineC").value;
+
+      context.lineWidth = wid;
+      context.strokeStyle = color;
+
+      // console.log(wid+", "+color);
+      context.beginPath();
+      context.moveTo(startX, startY);
+      context.lineTo(curX, curY);
+      context.stroke();
+    }
+
+    function over(e) {
+      startX = e.offsetX;
+      startY = e.offsetY;
+      dragging = true;
+    }
+
+    function move(e) {
+      var curX = e.offsetX,
+        curY = e.offsetY;
+      draw(curX, curY);
+      startX = curX;
+      startY = curY;
+    }
+
+    function out(e) {
+      dragging = false;
+    }
+  </script>
+</body>
+
+</html>

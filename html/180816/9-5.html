@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>9-5</title>
+  <script type="text/javascript">
+    function bckclr() {
+      // var random_clr = document.getElementById('backclr');
+      var co = Math.round(Math.random() * 0xFFFFFF).toString(16);
+      // alert(co);
+
+      document.body.style.background = "#" + co;
+    }
+  </script>
+</head>
+
+<body ondblclick="bckclr()">
+  <h3>바탕 아무곳이나 더블클릭</h3>
+  <hr> 바탕 아무곳이나 <strong>더블클릭</strong>하면 배경색이 랜덤하게 변합니다.
+</body>
+
+</html>

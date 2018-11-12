@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="msg">
+    위치정보
+  </div>
+  <div id="map">
+
+  </div>
+  <script type="text/javascript">
+    if (!navigator.geolocation) {
+      alert("지원하지 않음");
+    } else {
+      navigator.geolocation.getCurrentPosition(found);
+    }
+
+    function found(position) {
+      var now = new Date(position.timestamp);
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
+      var acc = position.coords.accuracy;
+
+      lat = lat.toPrecision(6);
+      lon = lon.toPrecision(6);
+
+      var text = "현재시간 " + now.toUTCString() + "<br>";
+      text += "현재위치 : 위도 - " + lat + "° , 경도 - " + lon + "°<br>";
+      text += "정확도 " + acc + "m<br>";
+
+      document.getElementById("msg").innerHTML = text;
+      var img = new Image();
+      img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=13&size=400x300&sensor=false&markers=color:red%7Clabel:C%7C" + lat + "," + lon;
+
+      document.getElementById("map").appendChild(img);
+    }
+  </script>
+</body>
+
+</html>

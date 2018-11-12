@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>drawCircle() 만들기</title>
+  <script type="text/javascript">
+    function drawCircle(ctx, x, y, radius) {
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
+      ctx.stroke();
+
+    }
+  </script>
+</head>
+
+<body>
+  <h3>drawCircle() 만들기</h3>
+  <hr>
+  <canvas id="canvas" width="300" height="300" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+    drawCircle(context, 100, 100, 80);
+    drawCircle(context, 150, 150, 30);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>비교연산</title>
+  <script type="text/javascript">
+    function compar() {
+      var x = document.getElementById("x").value;
+      var y = document.getElementById("y").value;
+
+      document.write("x = " + x + ", y = " + y + "<br>");
+      document.write("x == y : " + (x == y) + "<br>");
+      document.write("x != y : " + (x != y) + "<br>");
+      document.write("x >= y : " + (x >= y) + "<br>");
+      document.write("x > y : " + (x > y) + "<br>");
+      document.write("x <= y : " + (x <= y) + "<br>");
+      document.write("x < y : " + (x < y) + "<br>");
+    }
+  </script>
+</head>
+
+<body>
+  x : <input type="text" value="" id="x" style="width:60px"> y : <input type="text" value="" id="y" style="width:60px">
+  <button type="button" name="button" onclick="compar()">계산</button>
+
+</body>
+
+</html>

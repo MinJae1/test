@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>onclick</title>
+    <script type="text/javascript">
+      function calculate() {
+        var exp = document.getElementById("exp");
+        var result = document.getElementById("result");
+
+        result.value = eval(exp.value);
+      }
+    </script>
+  </head>
+  <body>
+    수식을 입력하고 계산버튼을 누르시오<br>
+    식 <input type="text" id="exp" value=""><br>
+    값 <input type="text" id="result" disabled style="background: white">&nbsp;<button type="button" onclick="calculate()">계산</button>
+  </body>
+</html>

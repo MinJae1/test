@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+    function evalparseintisnan() {
+      var res = eval("2*3+4*6");
+      document.write("eval(\"2*3+4*6\") = " + res + "<br>");
+
+      var m = parseInt("32");
+      document.write("parseInt(\"32\") = " + m + "<br>");
+
+      var n = parseInt("0x32");
+      document.write("parseInt(\"0x32\") = " + n + "<br>");
+
+      n = parseInt("hello");
+      if (isNaN(n)) {
+        document.write("hello는 숫자가 아님");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    evalparseintisnan();
+  </script>
+</body>
+
+</html>

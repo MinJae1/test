@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>오륜기 만들기</title>
+</head>
+
+<body>
+  <h3>오륜기 만들기</h3>
+  <hr>
+  <canvas id="canvas" width="300" height="300" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+    // var color = ["deepskyblue", "yellow", "black", "green", "red"];
+    //
+    // for (var i = 0; i < 5; i++) {
+    //   if (i % 2 == 0) {
+    //     context.beginPath();
+    //     context.strokeStyle = color[i];
+    //     context.lineWidth = 2;
+    //     context.arc(50 + (i * 30), 50, 30, 0, 2 * Math.PI, false);
+    //     context.stroke();
+    //   } else {
+    //     context.beginPath();
+    //     context.strokeStyle = color[i];
+    //     context.lineWidth = 2;
+    //     context.arc(50 + (i * 30), 80, 30, 0, 2 * Math.PI, false);
+    //     context.stroke();
+    //
+    //   }
+    // }
+
+    context.beginPath();
+    context.strokeStyle = "deepskyblue";
+    context.lineWidth = 2;
+    context.arc(50, 50, 30, 0, 2 * Math.PI, false);
+    context.stroke();
+
+    context.beginPath();
+    context.strokeStyle = "yellow";
+    context.lineWidth = 2;
+    context.arc(82, 80, 30, 0, 2 * Math.PI, false);
+    context.stroke();
+
+    context.beginPath();
+    context.strokeStyle = "black";
+    context.lineWidth = 2;
+    context.arc(113, 50, 30, 0, 2 * Math.PI, false);
+    context.stroke();
+
+    context.beginPath();
+    context.strokeStyle = "green";
+    context.lineWidth = 2;
+    context.arc(145, 80, 30, 0, 2 * Math.PI, false);
+    context.stroke();
+
+    context.beginPath();
+    context.strokeStyle = "red";
+    context.lineWidth = 2;
+    context.arc(177, 50, 30, 0, 2 * Math.PI, false);
+    context.stroke();
+  </script>
+</body>
+
+</html>

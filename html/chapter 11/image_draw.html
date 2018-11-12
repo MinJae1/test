@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <canvas id="canvas" width="300" height="300" style="background-color:aliceblue"></canvas>
+  <script type="text/javascript">
+    var cvs = document.getElementById("canvas");
+    var context = cvs.getContext("2d");
+
+    var img = new Image();
+    img.onload = function() {
+      context.drawImage(img, 20, 20, 100, 200);
+    }
+    img.src = "media/elsa.png";
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML태그에 리스너 작성</title>
+  <script type="text/javascript">
+    var p_obj;
+    function init() {
+      p_obj - document.getElementById("obj_p");
+      p_obj.addEventListener("mouseover",over);
+      p_obj.addEventListener("mouseout"),out;
+
+    }
+    function over() {
+
+    }
+    function out() {
+
+    }
+  </script>
+</head>
+
+<body>
+  <p>HTML태그에 리스너 작성</p>
+  <hr>
+  <p id="obj_p" onmouseover="this.style.backgroundColor = 'orchid'" onmouseout="this.style.backgroundColor = 'white'">마우스를 올리면 orchid 색으로 변경</p>
+</body>
+
+</html>

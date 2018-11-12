@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>z-index 스타일 프로퍼티</title>
+  <style media="screen">
+    div {
+      position: absolute;
+    }
+
+    img {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>z-index 스타일 프로퍼티</h3>
+  <hr>
+  <div>
+    <img src="media/spade-A.png" alt="스페이드A" width="100" height="140" onclick="zindex()">
+    <img src="media/spade-2.png" alt="스페이드2" width="100" height="140" onclick="zindex()">
+    <img src="media/spade-3.png" alt="스페이드3" width="100" height="140" onclick="zindex()">
+    <img src="media/spade-7.png" alt="스페이드8" width="100" height="140" onclick="zindex()">
+  </div>
+  <script type="text/javascript">
+    var offset_img = document.getElementsByTagName("img");
+
+    for (var i = 0; i < offset_img.length; i++) {
+      offset_img[i].style.offsetLeft = "10px";
+      offset_img[i].style.offsetTop = "5px";
+      offset_img[i].style.zIndex = i;
+      // alert(offset_img[i].style.zIndex);
+    }
+    function zindex() {
+      var index;
+      for (var i = 0; i < offset_img.length; i++) {
+        // if (offset_img[i].style.zIndex == 3) {
+
+          offset_img[i].style.zIndex++;
+          offset_img[i].style.zIndex %= offset_img.length;
+        // }
+
+      }
+      // offset_img[i].style.zIndex == 3
+
+    }
+  </script>
+</body>
+
+</html>

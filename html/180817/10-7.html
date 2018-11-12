@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>10-7</title>
+  <style media="screen">
+    td {
+      padding: 2px;
+    }
+
+    input {
+      width: 150px;
+    }
+  </style>
+  <script type="text/javascript">
+    var correct = 0;
+
+    function check() {
+      // var exp = document.getElementsByName("ex");
+      var ch_exp = document.getElementsByTagName("span");
+
+      var exp = ["5*6", "7+5*3", "23*2", "35-7"];
+      var ch_ans = document.getElementsByName("ans");
+      var cor_ans = new Array();
+      var my_ans = new Array();
+
+      for (var i = 0; i < exp.length; i++) {
+        // cor_ans[i] = eval(exp[i].value);
+        cor_ans[i] = eval(exp[i]);
+        my_ans[i] = ch_ans[i].value;
+        // console.log(ch_exp[i]);
+        if (cor_ans[i] != my_ans[i]) {
+          ch_exp[i].style.textDecoration = "line-through";
+          console.log(ch_exp[i]);
+        } else {
+          correct++;
+          ch_exp[i].style.textDecoration = "none";
+          // console.log(cor_ans[i] + " = " + my_ans[i]);
+        }
+        // console.log(correct);
+        document.getElementById("chk").value = correct;
+
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h3>산수 문제를 풀어봅시다</h3>
+  <p>수식을 계산하여 답을입력하고 채점 버튼을 누르세요</p>
+  <hr>
+  <!-- <label for="ans_1" id="ex_1">5*6</label> <input type="text" value="" id="ans_1"><br>
+    <label for="ans_2" id="ex_6">7+5*3</label> <input type="text" value="" id="ans_2"><br>
+    <label for="ans_3" id="ex_5">23*2</label> <input type="text" value="" id="ans_3"><br>
+    <label for="ans_4" id="ex_4">35-7</label> <input type="text" value="" id="ans_4"><br> -->
+  <table>
+    <tbody>
+      <tr>
+        <!-- <td><input type="text" value="5*6" name="ex" disabled style="border:none;background-color:white;font-size:15px"></td> -->
+        <td><span>5*6</span></td>
+        <td><input type="text" value="" name="ans"></td>
+      </tr>
+      <tr>
+        <td><span>7+5*3</span></td>
+        <!-- <td><input type="text" value="7+5*3" name="ex" disabled style="border:none;background-color:white;font-size:15px"></td> -->
+        <td><input type="text" value="" name="ans"></td>
+      </tr>
+      <tr>
+        <td><span>23*2</span></td>
+        <!-- <td><input type="text" value="23*2" name="ex" disabled style="border:none;background-color:white;font-size:15px"></td> -->
+        <td><input type="text" value="" name="ans"></td>
+      </tr>
+      <tr>
+        <td><span>35-7</span></td>
+        <!-- <td><input type="text" value="35-7" name="ex" disabled style="border:none;background-color:white;font-size:15px"></td> -->
+        <td><input type="text" value="" name="ans"></td>
+      </tr>
+      <tr>
+        <td><button type="button" name="button" onclick="check()">채첨</button></td>
+        <td><input type="text" value="0" disabled style="border:none;background-color:white" id="chk"></td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

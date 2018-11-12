@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>window.location으로 웹사이트 접속</title>
+    <script type="text/javascript">
+      function load() {
+        var select = document.getElementById('site');
+        window.location = select.options[select.selectedIndex].value;
+      }
+    </script>
+  </head>
+  <body>
+사이트 선택 : <select id="site">
+  <option value="https://www.naver.com/">네이버</option>
+  <option value="https://www.google.co.kr/">구글</option>
+  <option value="https://www.microsoft.com">마이크로소프트</option>
+</select>
+<button type="button" name="button" onclick="load()">웹사이트 접속</button>
+  </body>
+</html>

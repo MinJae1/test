@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>8-8</title>
+  <script type="text/javascript">
+    var cnt = 0;
+
+    function bigger() {
+      var sc_img = document.getElementById("image");
+      cnt++;
+      var x = 1+cnt;
+      sc_img.style.transform = "scaleX(" + x + ")";
+    }
+  </script>
+</head>
+
+<body>
+  <h3>클릭하면 옆으로 늘어납니다</h3>
+  <hr>
+  <img id="image" src="media\spongebob.png" alt="스펀지밥" onclick="bigger()" width="200" height="200">
+</body>
+
+</html>

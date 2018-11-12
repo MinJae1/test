@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>9-10</title>
+  <style media="screen">
+    button {
+      width: 100%;
+      margin: 5px;
+    }
+    td {
+      width: 25%;
+    }
+  </style>
+  <script type="text/javascript">
+    var n_exp;
+    var txt = "";
+    function text(c) {
+      n_exp  = document.getElementById("exp");
+      if (isNaN(c)) {
+        txt += c;
+      } else {
+        txt += c.toString();
+      }
+      console.log(">>>> "+ txt);
+
+      n_exp.value = txt;
+    }
+
+    function del() {
+      n_exp  = document.getElementById("exp");
+      console.log(">>>> "+ txt);
+      n_exp.value = txt.substr(0, txt.length - 1);
+      txt = n_exp.value;
+      console.log(">>>> "+ txt);
+    }
+
+    function clr() {
+      n_exp  = document.getElementById("exp");
+      txt = "0";
+      n_exp.value = "0";
+    }
+
+    function calc() {
+      n_exp  = document.getElementById("exp");
+      n_exp.value = eval(n_exp.value);
+      txt = "0";
+      console.log(">>>> "+ n_exp.value);
+    }
+
+  </script>
+</head>
+
+<body>
+  <h3>계산기 만들기</h3>
+  <hr>
+
+  <table style="width">
+    <tbody>
+      <tr>
+        <td colspan="4"><input id="exp" type="text" value="0" disabled style="width: 100%;text-align:right;background: white"></td>
+      </tr>
+
+      <tr>
+        <td> <button type="button" name="button" onclick="del()">back</button> </td>
+        <td> <button type="button" name="button" onclick="clr()">ce</button> </td>
+        <td> <button type="button" name="button" onclick="clr()">c</button> </td>
+        <td> <button type="button" name="button" onclick="calc()">=</button> </td>
+      </tr>
+      <tr>
+        <td> <button type="button" name="button" onclick="text(7)">7</button> </td>
+        <td> <button type="button" name="button" onclick="text(8)">8</button> </td>
+        <td> <button type="button" name="button" onclick="text(9)">9</button> </td>
+        <td> <button type="button" name="button" onclick="text('/')">/</button> </td>
+      </tr>
+      <tr>
+        <td> <button type="button" name="button" onclick="text(4)">4</button> </td>
+        <td> <button type="button" name="button" onclick="text(5)">5</button> </td>
+        <td> <button type="button" name="button" onclick="text(6)">6</button> </td>
+        <td> <button type="button" name="button" onclick="text('*')">*</button> </td>
+      </tr>
+      <tr>
+        <td> <button type="button" name="button" onclick="text(1)">1</button> </td>
+        <td> <button type="button" name="button" onclick="text(2)">2</button> </td>
+        <td> <button type="button" name="button" onclick="text(3)">3</button> </td>
+        <td> <button type="button" name="button" onclick="text('-')">-</button> </td>
+      </tr>
+      <tr>
+        <td> <button type="button" name="button" onclick="text(0)">0</button> </td>
+        <td> <button type="button" name="button" onclick="text('+')">+</button> </td>
+        <td> <button type="button" name="button" onclick="">none</button> </td>
+        <td> <button type="button" name="button" onclick="">none</button> </td>
+      </tr>
+
+    </tbody>
+  </table>
+</body>
+
+</html>
